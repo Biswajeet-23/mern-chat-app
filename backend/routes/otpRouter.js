@@ -11,4 +11,4 @@ otpRouter.get("/", (req, res) => {
 
 otpRouter.get("/generate", verifyToken, generateOtp);
 
-otpRouter.get("/verify", verifyOtp);
+otpRouter.post("/verify", verifyOtp);

@@ -6,6 +6,7 @@ import {
   userLogout,
   updateUser,
   deleteUser,
+  chatUsers,
 } from "../controllers/userController.js";
 import { verifyToken } from "../middlewares/tokenVerification.js";
 
@@ -31,5 +32,8 @@ userRouter.put("/update", verifyToken, updateUser);
 
 //delete user
 userRouter.delete("/delete", verifyToken, deleteUser);
+
+//get chat users
+userRouter.get("/chatUsers", verifyToken, chatUsers);
 
 export default userRouter;
